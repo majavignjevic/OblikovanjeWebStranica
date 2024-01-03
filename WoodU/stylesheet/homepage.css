@@ -1,0 +1,292 @@
+@import url(main.css);
+
+body{
+    margin: 0 auto;
+}
+
+nav{
+    background-color: var(--WhiteSmoke-Lighter);
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    padding: 30px 0 30px 0;
+}
+
+.nav{
+    width: 90vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav__MenuMain{
+    display: inline-flex;
+}
+
+.nav__MenuMain > li{
+    list-style: none;
+    text-align: center;
+    font-family: Montserrat Alternates;
+    font-size: 18px;
+    font-weight: 400;
+    padding: 0 14px 0 14px;
+}
+
+.nav__MenuMain > li:last-of-type{
+    padding-right: 0;
+}
+
+.nav__MenuSubMenu{
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    display: none;
+    margin-left: -20px;
+    padding: 20px 20px 20px 20px;
+    z-index: 10;
+    list-style: none;
+    text-align: center;
+    font-family: Montserrat Alternates;
+    font-size: 16px;
+    font-weight: 400;
+    background-color: var(--WhiteSmoke-Lighter);
+}
+
+.homepage__Hero{
+    position: relative;
+}
+
+.homepage__Overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 99.5%;
+    background-color: rgba(109, 106, 129, 0.6);
+}
+
+.homepage__Hero > img{
+    z-index: 10;
+    width: 100%;
+    height: 800px;
+}
+
+.homepage__HeroText{
+    position: absolute;
+    top: 10%;
+    z-index: 20;
+    color: var(--WhiteSmoke);
+    width: 400px;
+    left: 4%;
+    text-align: center;
+}
+
+.homepage__ShopItems, .homepage__WorkshophopItems{
+    display: flex;
+}
+
+.homepage__ShopItem{
+    display: flex;
+    flex-direction: column;
+    padding: 10px 10px 10px 10px
+}
+
+.homepage__ShopItem > img{
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+}
+
+.homepage__ShopItem > a{
+    font-family: Montserrat Subrayada;
+    margin: 10px 0;
+}
+
+.scroll{
+    padding: 10px 0;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+}
+
+.homepage__WorkshopInfo{
+    display: flex;
+    justify-content: space-between;
+}
+
+.homepage__BreakInfo{
+    position: relative;
+    margin: 40px 0;
+}
+
+.homepage__BreakInfo > img{
+    width: 100%;
+    height: 800px;
+    object-fit: cover;
+}
+
+.homepage__BreakInfoText{
+    position: absolute;
+    z-index: 20;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--WhiteSmoke);
+    max-width: 600px;
+}
+
+.homepage__BreakInfoText > p{
+    color: var(--WhiteSmoke);
+    font-family: Montserrat Alternates;
+    font-size: 35px; 
+    font-weight: 600;
+    text-align: center;
+    font-style: normal;
+    line-height: normal; 
+}
+
+.homepage__BreakInfoText > p > a{
+    color: var(--SchoolBusYellow);
+    font-family: Montserrat Alternates;
+    font-size: 35px; 
+    font-weight: 600;
+}
+
+.homepage__Info{
+    display: flex;
+    flex-direction: column;
+    padding: 40px 0;
+}
+
+.homepage__InfoItem {
+    display: flex;
+    flex-direction: column;
+}
+
+.homepage__InfoItem:nth-child(even) {
+    align-items: flex-end;
+}
+
+.homepage__InfoItem > h3{
+    color: var(--Rusty-red, #D33F49); 
+    width: 50%;
+}
+
+.homepage__InfoItem > p{
+    width: 50%;
+}
+
+.homepage__News{
+    background-color: hsl(356, 62%, 89%);
+    padding: 100px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.homepage__News > h2{
+    font-family: Montserrat Subrayada;
+    font-size: 20px; 
+    color: var(--Jet);
+    padding: 20px 60px;
+    background-color: var(--RobinEggBlue);
+    width: max-content;
+    border-radius: 15px;
+}
+
+.homepage__News > button{
+    border-radius: 15px;
+    background: var(--School-bus-yellow, #F7DC09);
+    padding: 15px 20px;
+    width: max-content;
+    border: none;
+}
+
+.homepage__NewsItem{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.homepage__NewsItem:nth-child(even){
+    flex-direction: row-reverse;
+}
+
+.homepage__NewsItem > img {
+    max-width: 600px;
+    max-height: 600px;
+}
+
+.homepage__NewsItemInfoCont{
+display: flex;
+}
+
+.homepage__NewsItemInfo > h4 {
+    color: #22ACB9;
+    font-family: Montserrat Subrayada;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 22px;
+}
+
+.homepage__NewsItemInfo > button{
+    border: none;
+    border-radius: 15px;
+    background: var(--School-bus-yellow, #F7DC09);
+    color: var(--Jet, #3E3C49);
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 22px;
+    height: 50px;
+    flex-shrink: 0; 
+}
+
+.homepage__NewsItem{
+    display: flex;
+    margin: 80px 0;
+    align-items: flex-start;
+}
+
+.homepage__BreakContact{
+    position: relative;
+}
+
+.homepage__BreakContact > img{
+    width: 100%;
+    height: 800px;
+    object-fit: cover;
+    
+}
+
+.homepage__BreakContactText{
+    position: absolute;
+    top: 45%;
+    left: 4%;
+}
+
+.homepage__BreakContactText > p{
+    color: var(--WhiteSmoke);
+    font-family: Montserrat Alternates;
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    max-width: 500px;
+}
+
+.homepage__BreakContactText > button{
+    background-color: var(--Rusty-red, #D33F49);
+    border: none;
+    border-radius: 15px;
+    padding: 25px 25px 25px 25px;
+    width: max-content;
+    height: auto;
+    color: var(--WhiteSmoke);
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal; 
+}

@@ -2,4 +2,115 @@
 
 body{
     margin: 0 auto;
+    height: 100vh;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.products__Filter{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px 20px;
+    border-radius: 25px;
+    background: var(--WhiteSmoke-Dark, #D9D9D9); 
+    margin-top: 50px;
+}
+
+.products__Filter > button{
+    background-color: transparent;
+    border: none;
+    font-family: Montserrat Subrayada;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 22px;
+    color: var(--Jet);
+    margin: 0 0;
+}
+
+.products__Filter span{
+    font-family: Souliyo Unicode;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px; 
+}
+
+.material-symbols-outlined {
+    color: var(--Jet);
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 900,
+  'GRAD' 0,
+  'opsz' 16
+}
+
+  
+.products__Grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-rows: repeat(4, 1fr);
+    margin-top: 100px;
+    margin-left: 0;
+  }
+  
+  .products__Grid a {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    width: 100%; /* Adjust as needed */
+    max-height: 100%; /* Ensure the anchor doesn't exceed the height of its row */
+    margin: 0 30px;
+    text-decoration: none;
+  }
+  .products__Grid:first-child{
+    margin-left: 0;
+    margin-right: 30px;
+  }
+  
+  .products__GridProduct {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .products__GridProduct img {
+    max-width: 100%;
+    width: 300px;
+    height: auto;
+    max-height: 100%; /* Adjust as needed */
+    height: 300px;
+    object-fit: cover;
+  }
+  
+  .products__GridProductInfoPrice {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  
+
+h4{
+    margin: 5px 0;
+}
+
+.products__GridProductInfoPrice button{
+    background-color: transparent;
+    border: none;
+    padding: none;
+    margin: 0 0;
+    width: fit-content;
+}
+
+main button{
+    background-color: var(--RustyRed);
+    color: var(--WhiteSmoke);
+    border: none;
+    margin: 100px 0;
 }

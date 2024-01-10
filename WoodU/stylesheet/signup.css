@@ -9,7 +9,7 @@ main{
 }
 
 .signup__Form{
-    background-color: var(--RobinEggBlue,  #5ED6E1);
+    background-color: var(--RobinEggBlue-Lighter,  #B6ECF1);
     max-width: 600px;
     border-radius: 15px;
     padding: 75px 0 100px 0;

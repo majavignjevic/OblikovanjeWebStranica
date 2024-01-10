@@ -36,8 +36,8 @@
           <li>
             <a href="products.html" onmouseenter="toggleVisibility('shop')">Shop</a>
             <ul class="nav__MenuSubMenu" id="shop">
-              <li><a href="">Narukvice</a></li>
-              <li><a href="">Naušnice</a></li>
+              <li><a href="productsEarings.html">Naušnice</a></li>
+              <li><a href="productsNecklace.html">Ogrlice</a></li>
               <li><a href="">Setovi</a></li>
               <li><a href="">Poklon bonovi i paketi</a></li>
             </ul>
@@ -47,7 +47,37 @@
       </div>
     </nav>
     <main>
-        
+        <div class="contact__Hero">
+          <div class="overlay"></div>
+          <img src="../images/contactHero.jpeg" alt="Contact"/>
+          <div class="contact__HeroText">
+            <h1>Contact</h1>
+          </div>
+        </div>
+        <div class="contact__InfoText container">
+          <h3>Imate pitanja? Slobodno nam se javite ili navratite!</h3>
+          <p>Uvijek smo tu za vas. Spremni odgovoriti na bilo koja pitanja, riješiti Vaše nedoumice vezane za naš drveni nakit. Imate sugestiju? Slobodno nam javite Vašu ideju za nakit i možda i Vaša ideja postane stvarnost! Ne znate kako sse odvijaju naše radionice, htijeli bi se okušati ali Vas je sram? Be brige, tu smo za pitanja, dobru atmosferu i sve nedoumice su riješene!</p>
+        </div>
+        <div class="contact__Map container">
+          <h3>Pronađite nas u Čakovcu!</h3>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d44046.04775909843!2d16.396262966912172!3d46.371808774537236!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4768ada5b7bfc8e1%3A0x459315b89fe1d5!2zxIxha292ZWM!5e0!3m2!1shr!2shr!4v1704297919973!5m2!1shr!2shr" width="100%" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="contact__Form container">
+          <h3>Javite nam se i putem maila!</h3>
+          <form action="">
+            <label for="contact__FormName">Ime</label>
+            <input type="text" id="contact__FormName" required/>
+            <label for="contact__FormSurname">Prezime</label>
+            <input type="text" id="contact__FormSurname" required/>
+            <label for="contact__FormMail" >e-mail</label>
+            <input type="email" id="contact__FormMail" required/>
+            <label for="contact__FormPhone">Broj mobitela</label>
+            <input type="tel" id="contact__FormPhone"/>
+            <label for="contact__FormMessage">Poruka</label>
+            <textarea id="contact__FormMessage" required></textarea>
+            <button type="submit">Pošaljite upit</button>
+          </form>
+        </div>
     </main>
     <footer>
       <div class="container">

@@ -31,7 +31,8 @@ main{
 .infocorner__Hero > img{
     z-index: 10;
     width: 100%;
-    height: 800px;
+    height: 550px;
+    object-fit: cover;
 }
 
 .infocorner__HeroText{
@@ -44,4 +45,14 @@ main{
 
 .infocorner__HeroText > h1{
     color: var(--WhiteSmoke);
+}
+
+@media screen and (max-width: 900px) {
+    .infocorner__Hero > img{
+        height: 450px;
+    }
+
+    .infocorner__InfoItem{
+        margin: 40px 0;
+    }
 }

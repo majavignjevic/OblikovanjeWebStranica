@@ -14,7 +14,7 @@ main{
 .contact__Hero > img{
     z-index: 10;
     width: 100%;
-    height: 800px;
+    height: 550px;
 }
 
 .contact__HeroText{
@@ -32,7 +32,7 @@ main{
 form{
     display: flex;
     flex-direction: column;
-    width: 800px;
+    width: 70%;
     margin: 0 auto;
 }
 
@@ -65,4 +65,14 @@ input, textarea{
 
 textarea{
     height: 130px;
+}
+
+@media screen and (max-width:900px) {
+    form{
+        width: 100%;
+    }
+
+    .contact__Hero > img{
+        height: 450px;
+    }   
 }

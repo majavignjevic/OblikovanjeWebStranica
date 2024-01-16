@@ -67,3 +67,22 @@ form a{
     width: 80%;
     text-align: left;
 }
+
+@media screen and (max-width: 900px) {
+    body{
+        background-color: var(--RobinEggBlue-Lighter,  #B6ECF1) !important;
+    }
+
+    label{
+        background: transparent;
+    }
+
+    button{
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+
+    .login__Form{
+        padding: 0;
+    }
+}

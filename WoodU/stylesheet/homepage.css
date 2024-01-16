@@ -62,23 +62,28 @@ nav{
     left: 0;
     width: 100%;
     height: 99.5%;
-    background-color: rgba(109, 106, 129, 0.6);
+    background-color: rgba(50, 48, 59, 0.8);;
 }
 
 .homepage__Hero > img{
     z-index: 10;
     width: 100%;
-    height: 800px;
+    height: 550px;
+    object-fit: cover;
 }
 
 .homepage__HeroText{
     position: absolute;
-    top: 10%;
+    top: 30%;
+    left: 4%;
     z-index: 20;
     color: var(--WhiteSmoke);
-    width: 400px;
-    left: 4%;
+    width: 500px;
     text-align: center;
+}
+
+.homepage__HeroText h1{
+    font-size: 50px;
 }
 
 .homepage__ShopItems, .homepage__WorkshophopItems{
@@ -88,18 +93,24 @@ nav{
 .homepage__ShopItem{
     display: flex;
     flex-direction: column;
-    padding: 10px 10px 10px 10px
+    padding: 10px 20px 10px 20px
 }
 
 .homepage__ShopItem > img{
-    width: 400px;
-    height: 400px;
+    width: 450px;
+    height: 450px;
     object-fit: cover;
+}
+
+.homepage__ShopItem p{
+    font-size: 18px;
+    margin: 10px 0;
 }
 
 .homepage__ShopItem > a{
     font-family: Montserrat Subrayada;
     margin: 10px 0;
+    font-size: 18px;
 }
 
 .scroll{
@@ -120,7 +131,7 @@ nav{
 
 .homepage__BreakInfo > img{
     width: 100%;
-    height: 800px;
+    height: 550px;
     object-fit: cover;
 }
 
@@ -154,12 +165,21 @@ nav{
 .homepage__Info{
     display: flex;
     flex-direction: column;
-    padding: 40px 0;
+    padding: 50px 0;
+}
+
+.homepage__InfoItem:first-child {
+    margin-top: 30px;
+}
+
+.homepage__InfoItem:first-child h3{
+    margin-top: 0;
 }
 
 .homepage__InfoItem {
     display: flex;
     flex-direction: column;
+    margin-top: 30px;
 }
 
 .homepage__InfoItem:nth-child(even) {
@@ -168,11 +188,12 @@ nav{
 
 .homepage__InfoItem > h3{
     color: var(--Rusty-red, #D33F49); 
-    width: 50%;
+    width: 55%;
+    margin-top: 80px;
 }
 
 .homepage__InfoItem > p{
-    width: 50%;
+    width: 55%;
 }
 
 .homepage__News{
@@ -220,9 +241,13 @@ nav{
 display: flex;
 }
 
+.homepage__NewsItemInfo{
+    margin: 0 10px;
+}
+
 .homepage__NewsItemInfo > h4 {
     color: #22ACB9;
-    font-family: Montserrat Subrayada;
+    font-family: Montserrat;
     font-size: 25px;
     font-style: normal;
     font-weight: 700;
@@ -255,14 +280,14 @@ display: flex;
 
 .homepage__BreakContact > img{
     width: 100%;
-    height: 800px;
+    height: 600px;
     object-fit: cover;
     
 }
 
 .homepage__BreakContactText{
     position: absolute;
-    top: 45%;
+    top: 30%;
     left: 4%;
 }
 
@@ -289,4 +314,50 @@ display: flex;
     font-style: normal;
     font-weight: 700;
     line-height: normal; 
+}
+
+@media screen and (max-width: 900px) {
+    body{
+        overflow-x: hidden;
+    }
+
+    .homepage__Hero > img, .homepage__BreakInfo > img,.homepage__BreakContact > img{
+        height: 450px;
+    }
+
+    .homepage__HeroText h1{
+        font-size: 35px;
+    }
+
+    .homepage__HeroText, .homepage__BreakContactText{
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+
+    .homepage__InfoItem > h3, .homepage__InfoItem > p{
+        width: 100%;
+    }
+
+    .homepage__NewsItem {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .homepage__NewsItem img{
+        width: 100%;
+    }
+
+    .homepage__NewsItemInfo{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .homepage__NewsItem:nth-child(even){
+        margin-top: 20px;
+        flex-direction: column;
+    }
 }

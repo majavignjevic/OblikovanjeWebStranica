@@ -6,6 +6,7 @@
     <meta name="author" content="Maja Vignjevic" />
     <link rel="stylesheet" type="text/css" href="../stylesheet/login.css" />
     <link rel="stylesheet" type="text/css" href="../stylesheet/main.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
   <body>
     <nav>
@@ -44,6 +45,42 @@
           </li>
           <li><a href="#">Košarica</a></li>
         </ul>
+        <div class="hamburger" onclick="toggleMenu()">
+          <div class="hamburger__item"></div>
+          <div class="hamburger__item"></div>
+          <div class="hamburger__item"></div>
+        </div>
+        <div class="nav__MobileLinks">
+          <ul class="nav__MobileLinksList">
+            <li><a href="infocorner.html">Info kutak</a></li>
+            <li>
+              <a href="#">Radionice</a>
+              <ul class="nav__MobileSubMenu" id="workshop">
+                <li><a href="">Kalendar radionica</a></li>
+                <li><a href="">Kako izgledaju naše radionice</a></li>
+                <li><a href="">Rezerviraj radionicu</a></li>
+              </ul>
+            </li>
+            <li><a href="contact.html">Kontakt</a></li>
+            <li>
+              <a href="#">Profil</a>
+              <ul class="nav__MobileSubMenu" id="profile">
+                <li><a href="login.html">Log in</a></li>
+                <li><a href="signup.html">Sign up</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="products.html">Shop</a>
+              <ul class="nav__MobileSubMenu" id="shop">
+                <li><a href="#">Naušnice</a></li>
+                <li><a href="#">Ogrlice</a></li>
+                <li><a href="">Setovi</a></li>
+                <li><a href="">Poklon bonovi i paketi</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Košarica</a></li>
+          </ul>
+        </div>
       </div>
     </nav>
     <main>
@@ -101,7 +138,6 @@
         </div>
       </div>
     </footer>
-
     <script type="text/javascript">
       function toggleVisibility(elementId) {
         console.log(`Toggle visibility for ${elementId} clicked`);
@@ -109,6 +145,28 @@
         element.style.display =
           element.style.display === "flex" ? "none" : "flex";
       }
+      function toggleMenu() {
+        const hamburger = document.querySelector('.hamburger');
+        hamburger.classList.toggle('active');
+    
+        const mobileMenu = document.querySelector('.nav__MobileLinks');
+        mobileMenu.classList.toggle('active');
+    
+        const body = document.body;
+        const html = document.documentElement;
+    
+        if (mobileMenu.classList.contains('active')) {
+            body.style.overflow = 'hidden';
+            html.style.overflow = 'hidden';
+            body.dataset.scroll = window.scrollY;
+        } else {
+            body.style.overflow = 'visible';
+            html.style.overflow = 'visible';
+            const scrollY = body.dataset.scroll || 0;
+            window.scrollTo(0, scrollY);
+            delete body.dataset.scroll;
+        }
+    }
     </script>
   </body>
 </html>
